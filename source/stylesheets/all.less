@@ -1,0 +1,25 @@
+@charset "utf-8";
+
+@import "bootstrap";
+
+.select_campus {
+  .jumbotron;
+    .container;
+  > div {
+    .row;
+    h1 { 
+      .make-sm-column(4);
+    }
+    > div { 
+      .make-sm-column(4);
+      margin-top: 3em;
+    }
+  }
+  a[data-entityId] {
+    .btn;
+    .btn-primary;
+    margin-bottom: 0.2em;
+  }
+  a:after {  content: " »"; }
+  cite { display: block; }
+}

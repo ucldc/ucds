@@ -1,0 +1,35 @@
+---
+title: Select your campus | authenticate using Shibboleth
+---
+<div class="select_campus">
+  <div>
+    <h1>Select your campus <small>authenticate using Shibboleth</small></h1>
+    <div>
+      <div><a data-entityId="urn:mace:incommon:berkeley.edu">UC Berkeley</a></div>
+      <div><a data-entityId="urn:mace:incommon:ucdavis.edu">UC Davis</a></div>
+      <div><a data-entityId="urn:mace:incommon:uci.edu">UC Irvine</a></div>
+      <div><a data-entityId="urn:mace:incommon:ucla.edu">UCLA</a></div>
+      <div><a data-entityId="urn:mace:incommon:ucmerced.edu">UC Merced</a></div>
+      <div><a data-entityId="urn:mace:incommon:ucop.edu">UC Office of the President</a></div>
+      <div><a data-entityId="urn:mace:incommon:ucr.edu">UC Riverside</a></div>
+      <div><a data-entityId="urn:mace:incommon:ucsd.edu">UC San Diego</a></div>
+      <div><a data-entityId="urn:mace:incommon:ucsf.edu">UC San Francisco</a></div>
+      <div><a data-entityId="urn:mace:incommon:ucsb.edu">UC Santa Barbara</a></div>
+      <div><a data-entityId="urn:mace:incommon:ucsc.edu">UC Santa Cruz</a></div>
+    </div>
+    <div>
+      <div class="alert alert-warning">
+        <h2>Logout notice</h2>
+        <div>
+          <blockquote>The Shibboleth 2 IdP does not support single logout in any meaningful sense.
+            <cite>
+              <a href="https://wiki.shibboleth.net/confluence/display/SHIB2/SLOIssues">SLOIssues | Shibboleth 2.x Wiki</a>
+            </cite>
+          </blockquote>
+          If you are using a public computer, be sure to close your browser when you are finished.
+        </div>
+      </div>
+      <div class="alert alert-info">Contact: <%= mail_to settings.email %></div>
+    </div>
+  </div>
+</div>
