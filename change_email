@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+set -eu
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )" # http://stackoverflow.com/questions/59895
+sed -i .orig "s/help@example.edu/$*/g" $DIR/build/index.html
