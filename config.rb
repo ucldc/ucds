@@ -53,6 +53,10 @@ set :js_dir, 'javascripts'
 
 set :images_dir, 'images'
 
+# http://stackoverflow.com/a/17271526/1763984
+# HELP_EMAIL='my_email@example.com' bundle exec middleman build
+set :email, ENV['HELP_EMAIL'] || 'help@example.edu'
+
 # Build-specific configuration
 configure :build do
   # For example, change the Compass output style for deployment
