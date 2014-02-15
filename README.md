@@ -10,7 +10,7 @@ This is for use with [shibboleth](https://shibboleth.net) a single
 sign on software used by the [InCommon](http://www.incommon.org) identity federation
 that the University of California participates in.
 
-# Using
+# Building
 
  * Install http://bower.io for web dev package magic
    * requires https://npmjs.org and http://nodejs.org
@@ -27,14 +27,22 @@ bundle exec middleman          # test server for middleman
 bundle exec middleman build    # build static templates
 ```
 
+# Install
+Serve `./build/` from the path `/ds/` on your apache/mod_shib server.
+
 # Customize
 If you are a Shibboleth SP and your application is just available to the 
 campuses and UCOP, then you can customize help email address:
 ```
 HELP_EMAIL='my_email@example.com' bundle exec middleman build
 ```
+or 
+```
+./change_email my_email@example.com
+```
+will just hack the email with `sed` (no need for `node` and `ruby`).
 
-Or, you can edit the templates in `source`.  
+If you want to customize more than the email, you can edit the templates in `source`.  
 
 In the HTML source use `data-entityid` to specify the IdP entityID.
 ```html
