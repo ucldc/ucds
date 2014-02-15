@@ -1,5 +1,5 @@
 UC Discovery Service
-==================
+====================
 
 Middleman project to build simple shibboleth "discovery service" for UC campuses 
 
