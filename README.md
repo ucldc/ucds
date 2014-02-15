@@ -1,7 +1,16 @@
 UC Discovery Service
 ====================
 
-Middleman project to build simple shibboleth "discovery service" for UC campuses 
+Middleman project to build simple shibboleth "discovery service"
+for UC campuses
+
+# How would I use this?
+
+This is for use with [shibboleth](https://shibboleth.net) a single
+sign on software used by the [InCommon](http://www.incommon.org) identity federation
+that the University of California participates in.
+
+# Using
 
  * Install http://bower.io for web dev package magic
    * requires https://npmjs.org and http://nodejs.org
@@ -16,6 +25,37 @@ bower install                  # install all web libraries required
 bundle                         # install middle man / ruby asset pipline
 bundle exec middleman          # test server for middleman
 bundle exec middleman build    # build static templates
+```
+
+# Customize
+If you are a Shibboleth SP and your application is just available to the 
+campuses and UCOP, then you can customize help email address:
+```
+HELP_EMAIL='my_email@example.com' bundle exec middleman build
+```
+
+Or, you can edit the templates in `source`.  
+
+In the HTML source use `data-entityID` to specify the IdP entityID.
+```html
+<a data-entityID="urn:mace:incommon:berkeley.edu">UC Berkeley</a>
+```
+
+The Shibboleth SP software, as part of the user login flow, will redirect the user
+to `/ds/?entityID=...&return=...`.  `return` is a URL.  Javascript is used to turn
+`data-entityID` attributes into the proper hrefs to continue in the login workflow
+once a campus is selected.
+
+```html
+<a href="{return}&entityID={entityID}">UC Berkeley</a></div>
+```
+
+Simply edit the HTML to use the entityIDs for your IdPs you wish to use.
+
+# gh-pages
+
+```
+rake publish
 ```
 
 # License 
