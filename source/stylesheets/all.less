@@ -8,9 +8,11 @@
   > div {
     .row;
     h1 { 
+      .make-xs-column(12);
       .make-sm-column(4);
     }
     > div { 
+      .make-xs-column(6);
       .make-sm-column(4);
       margin-top: 3em;
     }
@@ -19,6 +21,7 @@
     .btn;
     .btn-primary;
     margin-bottom: 0.2em;
+    z-index: 4;
   }
   a:after {  content: " »"; }
   cite { display: block; }

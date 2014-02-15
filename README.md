@@ -36,9 +36,9 @@ HELP_EMAIL='my_email@example.com' bundle exec middleman build
 
 Or, you can edit the templates in `source`.  
 
-In the HTML source use `data-entityID` to specify the IdP entityID.
+In the HTML source use `data-entityid` to specify the IdP entityID.
 ```html
-<a data-entityID="urn:mace:incommon:berkeley.edu">UC Berkeley</a>
+<a data-entityid="urn:mace:incommon:berkeley.edu">UC Berkeley</a>
 ```
 
 The Shibboleth SP software, as part of the user login flow, will redirect the user
@@ -47,7 +47,7 @@ to `/ds/?entityID=...&return=...`.  `return` is a URL.  Javascript is used to tu
 once a campus is selected.
 
 ```html
-<a href="{return}&entityID={entityID}">UC Berkeley</a></div>
+<a href="{return}&entityID={data-entityid}">UC Berkeley</a></div>
 ```
 
 Simply edit the HTML to use the entityIDs for your IdPs you wish to use.
