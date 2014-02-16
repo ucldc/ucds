@@ -19,7 +19,7 @@
     <div class="select_campus">
   <div>
     <h1>Select your campus <small>authenticate using Shibboleth</small></h1>
-    <div>
+    <div class="campus_links">
       <div><a data-entityid="urn:mace:incommon:berkeley.edu">UC Berkeley</a></div>
       <div><a data-entityid="urn:mace:incommon:ucdavis.edu">UC Davis</a></div>
       <div><a data-entityid="urn:mace:incommon:uci.edu">UC Irvine</a></div>
@@ -32,16 +32,22 @@
       <div><a data-entityid="urn:mace:incommon:ucsb.edu">UC Santa Barbara</a></div>
       <div><a data-entityid="urn:mace:incommon:ucsc.edu">UC Santa Cruz</a></div>
     </div>
-    <div>
+    <div class="help"> 
       <div class="alert alert-warning">
         <h2>Logout notice</h2>
         <div>
-          <blockquote>The Shibboleth 2 IdP does not support single logout in any meaningful sense.
-            <cite>
-              <a href="https://wiki.shibboleth.net/confluence/display/SHIB2/SLOIssues">SLOIssues | Shibboleth 2.x Wiki</a>
-            </cite>
-          </blockquote>
-          If you are using a public computer, be sure to close your browser when you are finished.
+	  <p>After you log in to your local campus authentication
+	  system—for some period of time a Shibboleth session stays active
+	  and this browser will be able to access 
+	  services <em>in addition to this one</em> without requiring
+	  an additional login. 
+          <small><a href="http://www.oit.uci.edu/idm/Access/Shibboleth/slo.php">more info</a></small>
+          </p>
+
+	  <p>Please lock your workstation or exit and restart your
+	  browser in order to protect your accounts from unauthorized
+	  access if your workstation is not in a secure location. </p>
+
         </div>
       </div>
       <div class="alert alert-info">Contact: <a href="mailto:help@example.edu">help@example.edu</a></div>
